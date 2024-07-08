@@ -11,5 +11,14 @@
 </div>
 <h3 style='font-family:century-gothic'>Set Color</h3>
 <input type='color' value='#189BCC'> </input>
-    <script src='function.js'>
+    <script>let input = document.querySelector('input')
+let album = document.querySelector('#transition')
+let h1 = document.querySelector('#h1')
+function SetBackground() {
+  console.log(input.value)
+  album.setAttribute('style', `background-color:${input.value}`)
+  h1.textContent = `The ${input.value} Album`
+}
+
+window.setInterval(SetBackground, '100') </script>
     </body>
